@@ -4,6 +4,9 @@ let bgMerc;
 let button;
 let startImg;
 let solis;
+let stars;
+let stars1;
+let starsRed;
 let playGame = false;
 
 
@@ -12,6 +15,9 @@ function preload() {
   startImg = loadImage('assets/startscreen.png');
   bgMerc = loadImage('assets/mercurio.jpeg');
   solis = loadImage('assets/solis.png');
+  stars= loadImage ('assets/stars.png')
+  stars1= loadImage ('assets/stars1.png')
+  starsRed= loadImage ('assets/starsRed.png')
 
 }
 
