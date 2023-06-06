@@ -1,26 +1,82 @@
-let bg;
+let bird;
+let pipes = [];
+let bgMerc;
 let button;
+let startImg;
+let solis;
+let playGame = false;
+
+
+
+function preload() {
+  startImg = loadImage('assets/startscreen.png');
+  bgMerc = loadImage('assets/mercurio.jpeg');
+  solis = loadImage('assets/solis.png');
+
+}
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    bg = loadImage('assets/startscreen.png');
+    background(startImg);
+    button = createButton('PLAY');
+    button.position(width/2-100, 2*height/3);
+    button.size(200, 90);
+    button.style("Comfortaa");
+    button.style("font-size", "48px");
 
-    background(0);
-  button = createButton('PLAY');
-  button.position(650, 450);
-  button.mousePressed(changeBG);
-  button.size(200, 90);
-  button.style("Comfortaa");
-  button.style("font-size", "48px");
+    bird = new Bird();
+    pipes.push(new Pipe());
+    
+    
+    
+    
   }
   
   
   function draw() {
-    background(bg);
+    if (playGame) {
+      
+      background(bgMerc);
+      button.hide();
+      for (var i = pipes.length-1; i >= 0; i--) {
+        pipes[i].show();
+        pipes[i].update();
+    
+        if (pipes[i].hits(bird)) {
+          console.log("HIT");
+        }
+    
+        if (pipes[i].offscreen()) {
+          pipes.splice(i, 1);
+        }
+      }
+    
+      bird.update();
+      bird.show();
+    
+      if (frameCount % 75 == 0) {
+        pipes.push(new Pipe());
+      }
+      
+
+
+    } else {
+      background(startImg);
+      button.show();
+      button.mousePressed(Play);
+    }
+   
 }
 
-function changeBG() {
-    bg = loadImage('assets/mercurio.jpeg');
-    background(bg);
-    button.hide();
+function Play() {
+    playGame = true;
+    
   }
+
+  function keyPressed() {
+    if (key == ' ') {
+      bird.up();
+      //console.log("SPACE");
+    }
+  }
+
