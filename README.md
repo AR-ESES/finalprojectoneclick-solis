@@ -45,4 +45,5 @@ O público-alvo de SOLIS são crianças em idade escolar, isto porque o jogo pod
 3. MERCHANDISING (Mockups de publicidade ao jogo)
 
 ![Pins](assets/pins.png)
+<br>
 ![Cartazes](assets/cartazes.png)
