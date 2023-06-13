@@ -43,6 +43,7 @@ O público-alvo de SOLIS são **crianças em idade escolar**, isto porque o jogo
 1. **LAYOUT DO JOGO** (Fundos, Ecrãs de Jogo, Planetas, Personagens, Barra de Vidas, Sistema Solar)
 2. **VÍDEO ANIMADO** (Trailer animado do jogo)
 3. **MERCHANDISING** (Mockups de publicidade ao jogo)
+4. **GAME PAPER PROTOTYPE** (Vídeo com o protótipo de papel do jogo)
 
 ![Pins](assets/pins.png)
 <br>
