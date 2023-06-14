@@ -19,6 +19,7 @@ function Pipe() {
         this.highlight = true;
         return true;
       }
+
     }
     this.highlight = false;
     return false;

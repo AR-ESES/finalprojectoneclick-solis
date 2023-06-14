@@ -8,6 +8,7 @@ let stars;
 let stars1;
 let starsRed;
 let playGame = false;
+let gameover = false;
 
 
 
@@ -40,6 +41,10 @@ function setup() {
   
   
   function draw() {
+    updateElement();
+    if (isOutOfScreen()) {
+      restartGame();
+    }
     if (playGame) {
       
       background(bgMerc);
@@ -47,6 +52,11 @@ function setup() {
       for (var i = pipes.length-1; i >= 0; i--) {
         pipes[i].show();
         pipes[i].update();
+        let gameover = true;
+        if (pipes[i].offscreen()) {
+          pipes.splice(i, 1);
+
+        }
     
         if (pipes[i].hits(bird)) {
           console.log("HIT");
@@ -86,3 +96,14 @@ function Play() {
     }
   }
 
+function updateElement() {
+  solis.x += 1;
+  solis.y += 1
+}
+
+function isOutOfScreen() {
+  if (solis.x < 0 || solis.x > windowWidth || solis.y < 0 || solis.y > windowHeight) {
+    return true;
+  }
+  return false;
+}
