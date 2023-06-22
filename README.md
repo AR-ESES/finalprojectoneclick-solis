@@ -4,6 +4,8 @@ Recursos disponíveis em: https://drive.google.com/drive/folders/1qZYU3ZaL6rKh3H
 
 Apresentação do projeto: https://www.canva.com/design/DAFlpJ6I3BU/5JHLA416wtq0yDY-qF1qyg/view?utm_content=DAFlpJ6I3BU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
+Trailer Oficial do jogo: https://youtu.be/ow7zOLRVXxQ
+
 ![StartScreen](assets/startscreen.png)
 
 ---
